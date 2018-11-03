@@ -7,10 +7,16 @@ class ForecastFacade
   end
 
   def get_lat
-    GeocoderService.new(location)[:latitude]
+    geocoder.geometry[:lat]
   end
 
-  def get_long
-    GeocoderService.new(location)[:longitude]
+  def get_lng
+    geocoder.geometry[:lng]
+  end
+
+  private
+
+  def geocoder
+    @geocoder_service ||= GeocoderService.new(location)
   end
 end

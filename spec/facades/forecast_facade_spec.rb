@@ -17,12 +17,18 @@ describe ForecastFacade do
   context 'instance methods' do
     context '#get_lat' do
       it 'should return latitude' do
-        denver_lat = 39.7392
+        denver_lat = 39.7392358
 
         expect(subject.get_lat).to eq(denver_lat)
       end
     end
 
-    #denver_long = 104.9903
+    context '#get_lng' do
+      it 'should return longitude' do
+        denver_lng = -104.990251
+
+        expect(subject.get_lng).to eq(denver_lng)
+      end
+    end
   end
 end

@@ -2,7 +2,7 @@ require "rails_helper"
 
 describe "Forecast API" do
   it 'should return lat and long for city and state in query params' do
-    user_location = denver,co
+    user_location = 'denver,co'
 
     get "/api/v1/forecast", params: {location: user_location}
 

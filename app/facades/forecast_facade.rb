@@ -6,24 +6,31 @@ class ForecastFacade
     @id = 1
   end
 
-  def get_lat
-    geocode_data.geometry[:lat]
+  def current_weather
+    CurrentWeather.new(weather_service.current_weather)
   end
 
-  def get_lng
-    geocode_data.geometry[:lng]
-  end
-
-  def weather
-  # DarkSkyService.new(coordinates)
-  conn = Faraday.new(url: 'https://api.darksky.net')
-  response = conn.get("/forecast/#{ENV['DARK_SKY_API_KEY']}/[latitude],[longitude]")
-
+  def hourly_temps
+    weather_service.hourly_weather.map do |hour_data|
+      HourlyTemperature.new(hour_data[:time], hour_data[:temperature])
+    end
   end
 
   private
 
   def geocode_data
     @geocode ||= GeocoderService.new(location)
+  end
+
+  def weather_service
+    @service ||= DarkSkyService.new(get_lat, get_lng)
+  end
+
+  def get_lat
+    geocode_data.geometry[:lat]
+  end
+
+  def get_lng
+    geocode_data.geometry[:lng]
   end
 end

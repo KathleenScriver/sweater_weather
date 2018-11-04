@@ -15,25 +15,16 @@ describe ForecastFacade do
   end
 
   context 'instance methods' do
-    context '#get_lat' do
-      it 'should return latitude' do
-        denver_lat = 39.7392358
-
-        expect(subject.get_lat).to eq(denver_lat)
+    context '#current_weather' do
+      it 'should return current weather object' do
+        expect(subject.current_weather).to be_a(CurrentWeather)
       end
     end
 
-    context '#get_lng' do
-      it 'should return longitude' do
-        denver_lng = -104.990251
-
-        expect(subject.get_lng).to eq(denver_lng)
+    context '#hourly_temps' do
+      it 'should return Hourly Temperature objects' do
+        expect(subject.hourly_temps.first).to be_a(HourlyTemperature)
       end
     end
-
-    context '#weather'
-      it 'should return forecast objects' do
-
-      end
   end
 end

@@ -6,17 +6,7 @@ class ForecastFacade
     @id = 1
   end
 
-  def get_lat
-    geocoder.geometry[:lat]
-  end
-
-  def get_lng
-    geocoder.geometry[:lng]
-  end
-
-  private
-
-  def geocoder
-    @geocoder_service ||= GeocoderService.new(location)
+  def coordinates
+    GeocoderService.new(location).geometry
   end
 end

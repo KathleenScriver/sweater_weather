@@ -13,7 +13,7 @@ class ForecastFacade
   def hourly_temps
     weather_service.hourly_weather.map do |hour_data|
       HourlyTemperature.new(hour_data[:time], hour_data[:temperature])
-    end
+    end.take(12)
   end
 
   def daily_weather

@@ -1,6 +1,4 @@
 class ForecastFacade
-  # include ActiveModel::Serialization
-
   attr_reader :location, :id
 
   def initialize(location)

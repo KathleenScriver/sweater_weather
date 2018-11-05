@@ -12,6 +12,6 @@ describe "Forecast API" do
     expect(raw_data[:data]).to have_key(:attributes)
     expect(raw_data[:data][:attributes]).to have_key(:current_weather)
     expect(raw_data[:data][:attributes]).to have_key(:hourly_temps)
-    expect(raw_data[:data][:attributes]).to have_key(:daily)
+    expect(raw_data[:data][:attributes]).to have_key(:daily_weather)
   end
 end

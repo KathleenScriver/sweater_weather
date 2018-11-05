@@ -1,10 +1,9 @@
 class ForecastFacade
-  include ActiveModel::Serialization
-
-  attr_reader :location
+  attr_reader :location, :id
 
   def initialize(location)
     @location = location
+    @id = nil
   end
 
   def current_weather
@@ -16,6 +15,14 @@ class ForecastFacade
       HourlyTemperature.new(hour_data[:time], hour_data[:temperature])
     end
   end
+
+  def daily_weather
+    weather_service.daily_weather.map do |daily_data|
+      DailyWeather.new(daily_data)
+    end
+  end
+
+
 
   private
 

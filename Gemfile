@@ -28,7 +28,7 @@ gem 'faraday'
 gem 'figaro'
 gem 'active_model_serializers'
 gem 'awesome_print'
-gem 'active_model_serializers'
+gem 'fast_jsonapi'
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 

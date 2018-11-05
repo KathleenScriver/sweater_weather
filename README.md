@@ -30,4 +30,4 @@ SweaterWeather is a weather app built to practice building a backend and api end
 #### ```/api/v1/forecast?denver,co```
   You can insert any city and state (use a `+` between words in city if needed). This will take the city and first hit the Google Geocoder API to retrieve the latitude and longitude for the given location. This latitutde and longitude will then be fed to the Dark Sky API to retrieve all weather data.
   Example of returned JSON: 
-  <em><img src="https://github.com/KathleenYruegas/sweater_weather/blob/master/Screen%20Shot%202018-11-05%20at%202.41.57%20PM.png" alt="Image of JSON Hash"></em>
+  <em><img src="https://github.com/KathleenYruegas/sweater_weather/blob/master/Screen%20Shot%202018-11-05%20at%202.41.57%20PM.png" alt="Image of JSON Hash" height=200px></em>

@@ -22,8 +22,6 @@ class ForecastFacade
     end
   end
 
-
-
   private
 
   def geocode_data

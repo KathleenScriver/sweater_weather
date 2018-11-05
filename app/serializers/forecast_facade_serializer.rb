@@ -1,3 +1,3 @@
 class ForecastFacadeSerializer < ActiveModel::Serializer
-  attributes :location
+  attribute :location
 end

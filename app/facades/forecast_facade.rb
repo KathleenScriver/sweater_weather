@@ -1,10 +1,11 @@
 class ForecastFacade
-  include ActiveModel::Serialization
+  # include ActiveModel::Serialization
 
-  attr_reader :location
+  attr_reader :location, :id
 
   def initialize(location)
     @location = location
+    @id = nil
   end
 
   def current_weather

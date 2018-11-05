@@ -1,7 +1,6 @@
 class DailyWeatherSerializer
   include FastJsonapi::ObjectSerializer
   set_type :DailyWeather
-
   attributes :icon,
              :temp_high,
              :temp_low

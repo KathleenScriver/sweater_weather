@@ -3,8 +3,8 @@ class ForecastFacadeSerializer < ActiveModel::Serializer
   set_type :ForecastFacade
   attributes :location,
              :current_weather,
-             :hourly_temps
-
+             :hourly_temps,
+             :daily_weather
 
   attribute :daily_weather do |object|
     DailyWeatherSerializer.new(object.daily_weather)

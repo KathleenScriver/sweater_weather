@@ -1,4 +1,4 @@
-class ForecastFacadeSerializer < ActiveModel::Serializer
+class ForecastFacadeSerializer
   include FastJsonapi::ObjectSerializer
   set_type :ForecastFacade
   attributes :location,

@@ -13,6 +13,10 @@ class DarkSkyService
     all_weather_data[:hourly][:data]
   end
 
+  def daily_weather
+    all_weather_data[:daily][:data]
+  end
+
   private
 
   def conn

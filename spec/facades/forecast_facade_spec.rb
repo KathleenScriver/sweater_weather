@@ -26,5 +26,11 @@ describe ForecastFacade do
         expect(subject.hourly_temps.first).to be_a(HourlyTemperature)
       end
     end
+
+    context '#daily_weather' do
+      it 'should return daily weather for upcoming week' do
+        expect(subject.daily_weather.first).to be_a(DailyWeather)
+      end
+    end
   end
 end

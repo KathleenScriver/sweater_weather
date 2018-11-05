@@ -16,6 +16,14 @@ class ForecastFacade
     end
   end
 
+  def daily_weather
+    weather_service.daily_weather.map do |daily_data|
+      DailyWeather.new(daily_data)
+    end
+  end
+
+
+
   private
 
   def geocode_data

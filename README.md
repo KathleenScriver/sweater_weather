@@ -9,14 +9,15 @@ SweaterWeather is a weather app built to practice building a backend and api end
 * System dependencies
   - ```gem 'fast_jsonapi'``` used to build the api's format
 
-### Instructions to clone down project:
-  ``` 1. git clone git@github.com:KathleenYruegas/sweater_weather.git
+#### Instructions to clone down project:
+      1. git clone git@github.com:KathleenYruegas/sweater_weather.git
       2. bundle install
-      3. rake db:create ```
-     
-     External APIs
-  Google Geocoder API (Key needed to run app on your local, stored as ```GOOGLE_API_KEY``` https://developers.google.com/maps/documentation/geocoding/start
-
+      3. rake db:create 
+        
+ - External APIs Used
+  - Google Geocoder API (Key needed to run app on your local, stored as ```GOOGLE_API_KEY```)               https://developers.google.com/maps/documentation/geocoding/start
+  - Dark Sky API (Key needed, stored as ```DARK_SKY_API_KEY```) https://darksky.net/dev/docs
+      
 * How to run the test suite
   This app uses RSpec for it's test suite. To run, simply type in ```rspec``` in your terminal from the root of the project.
 

@@ -1,5 +1,5 @@
 class Api::V1::BackgroundController < ApplicationController
   def index
-    render json: BackgroundFacade.new(params[:location])
+    render json: BackgroundFacadeSerializer.new(BackgroundFacade.new(params[:location])).serializable_hash
   end
 end

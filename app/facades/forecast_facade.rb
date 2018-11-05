@@ -1,9 +1,10 @@
 class ForecastFacade
-  attr_reader :location, :id
+  include ActiveModel::Serialization
+
+  attr_reader :location
 
   def initialize(location)
     @location = location
-    @id = 1
   end
 
   def current_weather

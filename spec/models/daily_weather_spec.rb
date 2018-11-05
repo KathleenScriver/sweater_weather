@@ -13,9 +13,9 @@ describe DailyWeather do
   subject { DailyWeather.new(attributes) }
 
   it 'exists with attributes' do
-    expect(subject.day).to eq('Saturday')
+    expect(subject.time).to eq(1541300400)
     expect(subject.icon).to eq('partly-sunny')
-    expect(subject.chance_of_rain).to eq('38%')
+    expect(subject.chance_of_rain).to eq(0.38)
     expect(subject.temp_high).to eq(55.0)
     expect(subject.temp_low).to eq(39.7)
   end

@@ -13,7 +13,7 @@ describe CurrentWeather do
   subject {CurrentWeather.new(data)}
 
   it 'is created with weather attributes' do
-    expect(subject.time).to eq(" 9:00 PM")
+    expect(subject.time).to eq(1541300400)
     expect(subject.summary).to eq("Sunny")
     expect(subject.temperature).to eq(41.1)
     expect(subject.feels_like).to eq(39.5)

@@ -13,4 +13,8 @@ class ForecastFacadeSerializer < ActiveModel::Serializer
   attribute :daily_weather do |object|
     DailyWeatherSerializer.new(object.daily_weather)
   end
+
+  attribute :hourly_temps do |object|
+    HourlyTemperatureSerializer.new(object.hourly_temps)
+  end
 end

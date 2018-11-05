@@ -6,7 +6,8 @@ class CurrentWeather
               :feels_like,
               :humidity,
               :visibility,
-              :uv_index
+              :uv_index,
+              :id
 
   def initialize(data_hash)
     @time = data_hash[:time]
@@ -17,9 +18,6 @@ class CurrentWeather
     @humidity = data_hash[:humidity]
     @visibility = data_hash[:visibility]
     @uv_index = data_hash[:uvIndex]
-  end
-
-  def time
-    Time.at(@time).strftime('%l:%M %p')
+    @id = nil
   end
 end

@@ -13,7 +13,7 @@ class FlickrService
     JSON.parse(response.body, symbolize_names: true)[:photos][:photo].select do |photo|
       photo.keys.include?(:url_o)
     end
-  end 
+  end
 
   private
 
@@ -36,7 +36,7 @@ class FlickrService
      format: "json",
      nojsoncallback: 1,
      extras: "url_o",
-     tags: "parks"
+     tags: "park,building"
     }
   end
 end

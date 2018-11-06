@@ -1,6 +1,6 @@
 # README
 
-SweaterWeather is a weather app built to practice building a backend and api endpoints that will interface with a separate frontend that will consume the api endpoints and display the given data.  
+SweaterWeather is a weather app built to practice building a backend and api endpoints that will interface with a separate frontend that will consume the api endpoints and display the given data.  You can visit the deployed site here https://sweater-weather-ky.herokuapp.com
 
 * Ruby version
   - Ruby 2.4.1
@@ -17,6 +17,7 @@ SweaterWeather is a weather app built to practice building a backend and api end
  - External APIs Used
    - Google Geocoder API (Key needed to run app on your local, stored as ```GOOGLE_API_KEY```)                     https://developers.google.com/maps/documentation/geocoding/start
    - Dark Sky API (Key needed, stored as ```DARK_SKY_API_KEY```) https://darksky.net/dev/docs
+   - Flickr API (Key needed, stored as `FLICKR_API_KEY`) https://www.flickr.com/services/api/
       
 * How to run the test suite
   This app uses RSpec for it's test suite. To run, simply type in ```rspec``` in your terminal from the root of the project.
@@ -30,7 +31,7 @@ SweaterWeather is a weather app built to practice building a backend and api end
 #### ```/api/v1/forecast?denver,co```
   You can insert any city and state (use a `+` between words in city if needed). This will take the city and first hit the Google Geocoder API to retrieve the latitude and longitude for the given location. This latitutde and longitude will then be fed to the Dark Sky API to retrieve all weather data.
   Example of returned JSON: 
-  ``` 
+```
   {
     "data": {
         "id": null,
@@ -62,4 +63,13 @@ SweaterWeather is a weather app built to practice building a backend and api end
                             "temperature": 53.03,
                             "time": " 9 PM"
                         }
-                    },
+              }
+                     
+```
+                   
+                   
+#### `api/v1/background?location=denver,co` 
+ - This endpoint takes any city and state in its query params (spaces between city words should be a `+`) and will return a random picture associated with that location. This is accomplished by hitting the Flickr API to search for public photos based on given parameters.
+
+
+ 

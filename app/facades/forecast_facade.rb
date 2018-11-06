@@ -1,4 +1,6 @@
 class ForecastFacade
+  include LocationFacade
+
   attr_reader :location, :id
 
   def initialize(location)
@@ -24,19 +26,19 @@ class ForecastFacade
 
   private
 
-  def geocode_data
-    @geocode ||= GeocoderService.new(location)
-  end
-
   def weather_service
     @service ||= DarkSkyService.new(get_lat, get_lng)
   end
 
-  def get_lat
-    geocode_data.geometry[:lat]
-  end
-
-  def get_lng
-    geocode_data.geometry[:lng]
-  end
+  # def geocode_data
+  #   @geocode ||= GeocoderService.new(location)
+  # end
+  #
+  # def get_lat
+  #   geocode_data.geometry[:lat]
+  # end
+  #
+  # def get_lng
+  #   geocode_data.geometry[:lng]
+  # end
 end

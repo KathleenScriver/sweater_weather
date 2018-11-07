@@ -2,13 +2,13 @@ require 'rails_helper'
 
 describe "Users API" do
   scenario 'user can post to create account' do
-    params = {
+    user_data = {
       email: 'kat@email.com',
       password: 'test',
       password_confirmation: 'test'
       }
 
-      post "/api/v1/users", params
+      post "/api/v1/users", params: user_data
 
       user_response = JSON.parse(response.body, symbolize_names: true)[:data]
 

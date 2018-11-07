@@ -3,7 +3,7 @@ class Api::V1::UsersController < ApplicationController
     user = User.create(user_params)
     user.generate_api_key
     if user.save
-     render json: {api_key: user.api_key}
+     render json: {api_key: user.api_key}, status: 200
     else
      render json: {message: "Error"}, status: 401
     end

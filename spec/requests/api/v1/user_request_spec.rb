@@ -12,6 +12,7 @@ describe "Users API" do
 
       user_response = JSON.parse(response.body, symbolize_names: true)
 
+      expect(response.status).to eq(200)
       expect(user_response).to have_key(:api_key)
       expect(User.last.email).to eq('kat@email.com')
   end

@@ -1,6 +1,6 @@
 class Api::V1::UsersController < ApplicationController
   def create
-    user = User.create(user_params)
+    user = User.new(user_params)
     user.generate_api_key
     if user.save
      render json: {api_key: user.api_key}, status: 200

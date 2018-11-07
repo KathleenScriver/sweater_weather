@@ -28,7 +28,7 @@ SweaterWeather is a weather app built to practice building a backend and api end
 
 ### API endpoints:
 
-#### ```/api/v1/forecast?denver,co```
+#### `get '/api/v1/forecast?denver,co'`
   You can insert any city and state (use a `+` between words in city if needed). This will take the city and first hit the Google Geocoder API to retrieve the latitude and longitude for the given location. This latitutde and longitude will then be fed to the Dark Sky API to retrieve all weather data.
   Example of returned JSON: 
 ```
@@ -68,8 +68,12 @@ SweaterWeather is a weather app built to practice building a backend and api end
 ```
                    
                    
-#### `api/v1/background?location=denver,co` 
+#### ` get 'api/v1/background?location=denver,co'` 
  - This endpoint takes any city and state in its query params (spaces between city words should be a `+`) and will return a random picture associated with that location. This is accomplished by hitting the Flickr API to search for public photos based on given parameters.
+ 
+ 
+ #### `post 'api/v1/users'`
+  - Hit this endpoint and send along an email, password, and password_confirmation as params to create a new account. This post request will return an api_key in the response. 
 
 
  

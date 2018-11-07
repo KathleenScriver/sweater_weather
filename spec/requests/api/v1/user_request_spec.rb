@@ -10,7 +10,7 @@ describe "Users API" do
 
       post "/api/v1/users", params: user_data
 
-      user_response = JSON.parse(response.body, symbolize_names: true)[:data]
+      user_response = JSON.parse(response.body, symbolize_names: true)
 
       expect(user_response).to have_key(:api_key)
       expect(User.last.email).to eq('kat@email.com')

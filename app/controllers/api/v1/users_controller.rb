@@ -1,11 +1,12 @@
 class Api::V1::UsersController < ApplicationController
   def create
-    user = User.new(user_params)
+    user = User.create(user_params)
+    user.generate_api_key
     if user.save
-     render json: user.api_key
-   else
+     render json: {api_key: user.api_key}
+    else
      render json: {message: "Error"}, status: 401
-   end
+    end
   end
 
   private

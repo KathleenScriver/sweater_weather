@@ -7,7 +7,7 @@ describe "Forecast API" do
     get "/api/v1/forecast", params: {location: user_location}
 
     raw_data = JSON.parse(response.body, symbolize_names: true)
-require "pry"; binding.pry
+
     expect(raw_data).to have_key(:data)
     expect(raw_data[:data]).to have_key(:attributes)
     expect(raw_data[:data][:attributes]).to have_key(:current_weather)

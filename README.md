@@ -15,9 +15,12 @@ SweaterWeather is a weather app built to practice building a backend and api end
       3. rake db:create 
         
  - External APIs Used
-   - Google Geocoder API (Key needed to run app on your local, stored as ```GOOGLE_API_KEY```)                     https://developers.google.com/maps/documentation/geocoding/start
-   - Dark Sky API (Key needed, stored as ```DARK_SKY_API_KEY```) https://darksky.net/dev/docs
-   - Flickr API (Key needed, stored as `FLICKR_API_KEY`) https://www.flickr.com/services/api/
+   - Google Geocoder API (Key needed to run app on your local, stored as ```GOOGLE_API_KEY```) https://developers.google.com/maps/documentation/geocoding/start
+     -Used to convert user location to latitude and longitude coordinates to plug into weather api and flickr api.             
+   - Dark Sky API (Key needed, stored as ```DARK_SKY_API_KEY```) https://darksky.net/dev/docs  
+      -Used to retrieve the weather for the given lat and long coordinates. 
+   - Flickr API (Key needed, stored as `FLICKR_API_KEY`) https://www.flickr.com/services/api/  
+     -Used to retrieve a random image associated with the location provided by the user.
       
 * How to run the test suite
   - This app uses RSpec for it's test suite. To run, simply type in ```rspec``` in your terminal from the root of the project.

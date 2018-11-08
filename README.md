@@ -22,9 +22,6 @@ SweaterWeather is a weather app built to practice building a backend and api end
 * How to run the test suite
   - This app uses RSpec for it's test suite. To run, simply type in ```rspec``` in your terminal from the root of the project.
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
 
 ### API endpoints:
 
@@ -77,3 +74,4 @@ SweaterWeather is a weather app built to practice building a backend and api end
 
 
  
+* Services (job queues, cache servers, search engines, etc.)

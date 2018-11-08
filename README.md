@@ -20,7 +20,7 @@ SweaterWeather is a weather app built to practice building a backend and api end
    - Flickr API (Key needed, stored as `FLICKR_API_KEY`) https://www.flickr.com/services/api/
       
 * How to run the test suite
-  This app uses RSpec for it's test suite. To run, simply type in ```rspec``` in your terminal from the root of the project.
+  - This app uses RSpec for it's test suite. To run, simply type in ```rspec``` in your terminal from the root of the project.
 
 * Services (job queues, cache servers, search engines, etc.)
 
@@ -73,7 +73,7 @@ SweaterWeather is a weather app built to practice building a backend and api end
  
  
  #### `post 'api/v1/users'`
-  - Hit this endpoint and send along an email, password, and password_confirmation as params to create a new account. This post request will return an api_key in the response. 
+  - Hit this endpoint and send along an email, password, and password_confirmation in the body of your request to create a new account. This post request will return an api_key in the response. 
 
 
  

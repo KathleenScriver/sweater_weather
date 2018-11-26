@@ -1,6 +1,6 @@
 # README
 
-SweaterWeather is a weather app built to practice building a backend and api endpoints that will interface with a separate frontend that will consume the api endpoints and display the given data.  You can visit the deployed site here https://sweater-weather-ky.herokuapp.com
+SweaterWeather is a weather app built to practice building a backend and api endpoints that will interface with a separate frontend that will consume the api endpoints and display the given data.  You can visit the deployed site for the back end here https://sweater-weather-ky.herokuapp.com
 
 * Ruby version
   - Ruby 2.4.1

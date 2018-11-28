@@ -1,6 +1,6 @@
 # README
 
-SweaterWeather is a weather app built to practice building a backend and api endpoints that will interface with a separate frontend that will consume the api endpoints and display the given data.  You can visit the deployed site for the back end here https://sweater-weather-ky.herokuapp.com
+SweaterWeather is a weather app built to practice building a backend and api endpoints that will interface with a separate frontend that will consume the api endpoints and display the given data.  You can visit the deployed site for the back end here https://sweater-weather-ky.herokuapp.com (please add an API endpoint to view JSON response data. API endpoints listed below.)
 
 (The modular front end can be found here: https://github.com/KathleenYruegas/sweater_weather_fe)
 

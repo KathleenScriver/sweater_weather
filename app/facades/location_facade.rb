@@ -1,5 +1,4 @@
 module LocationFacade
-
   def get_lat
     geocode_data.geometry[:lat]
   end
@@ -9,7 +8,7 @@ module LocationFacade
   end
 
   private
-  
+
   def geocode_data
     @geocode ||= GeocoderService.new(@location)
   end

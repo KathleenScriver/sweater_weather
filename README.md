@@ -79,7 +79,7 @@ SweaterWeather is a weather app built to practice building a backend and api end
   ```Body Format:
      email: some@email.com
      password: abc123
-     password_confirmation: abc123```
+     password_confirmation: abc123
 
 
 

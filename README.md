@@ -76,10 +76,10 @@ SweaterWeather is a weather app built to practice building a backend and api end
  
  #### `post 'api/v1/users'`
   - Hit this endpoint and send along an email, password, and password_confirmation in the body of your request to create a new account. This post request will return an api_key in the response. 
-  ```Body Format:
+  `Body Format:
      email: some@email.com
      password: abc123
-     password_confirmation: abc123
+     password_confirmation: abc123`
 
 
 

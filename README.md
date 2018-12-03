@@ -87,4 +87,5 @@ SweaterWeather is a weather app built to practice building a backend and api end
   - SimpleCov is used to measure test coverage. After running `rspec`, type in `open coverage/index.html` into your command line to see the test coverage report. (Screen shot below)
   
   <img src='./test-coverage-screenshot.png'>
+  
 

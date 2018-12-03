@@ -8,7 +8,7 @@ describe BackgroundFacade do
 
         back_facade = BackgroundFacade.new(location)
 
-        expect(back_facade.location_image).to include('.jpg')
+        expect(back_facade.location_image).to include('.jpg' || '.png')
       end
     end
   end

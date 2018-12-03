@@ -80,7 +80,11 @@ SweaterWeather is a weather app built to practice building a backend and api end
      email: some@email.com
      password: abc123
      password_confirmation: abc123
+```
 
-
-
+#### Testing
+  - Type `rspec` into your command line from the root of the project to run the test suit.  Currently, all tests are passing.
+  - SimpleCov is used to measure test coverage. After running `rspec`, type in `open coverage/index.html` into your command line to see the test coverage report. (Screen shot below)
+  
+  <img src='./test-coverage-screenshot.png'>
 

@@ -2,7 +2,7 @@
 
 SweaterWeather is a weather app built to practice building a backend and api endpoints that will interface with a separate frontend that will consume the api endpoints and display the given data.  You can visit the deployed site for the back end here https://sweater-weather-ky.herokuapp.com (please add an API endpoint to view JSON response data. API endpoints listed below.)
 
-(The modular front end can be found here: https://github.com/KathleenYruegas/sweater_weather_fe)
+(The modular front end repo can be found here: https://github.com/KathleenYruegas/sweater_weather_fe or deployed here: https://kathleenyruegas.github.io/sweater_weather_fe/)
 
 * Ruby version
   - Ruby 2.4.1
@@ -76,7 +76,15 @@ SweaterWeather is a weather app built to practice building a backend and api end
  
  #### `post 'api/v1/users'`
   - Hit this endpoint and send along an email, password, and password_confirmation in the body of your request to create a new account. This post request will return an api_key in the response. 
+  ```Body Format:
+     email: some@email.com
+     password: abc123
+     password_confirmation: abc123
+```
 
+#### Testing
+  - Type `rspec` into your command line from the root of the project to run the test suit.  Currently, all tests are passing.
+  - SimpleCov is used to measure test coverage. After running `rspec`, type in `open coverage/index.html` into your command line to see the test coverage report. (Screen shot below)
+  
+  <img src='./test-coverage-screenshot.png'>
 
- 
-* Services (job queues, cache servers, search engines, etc.)
